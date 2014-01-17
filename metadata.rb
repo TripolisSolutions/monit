@@ -7,7 +7,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.7.3"
 
 
-attribute 'monit/notify_email', 
+attribute 'monit/notify_email',
   :description => 'The email address to send alerts to.',
   :type => "string",
   :required => "recommended"
@@ -22,3 +22,4 @@ attribute 'monit/poll_start_delay',
   :type => "string",
   :required => "recommended"
 
+depends "postfix"
