@@ -1,0 +1,4 @@
+check process errbit_unicorn with pidfile <%= @node[:unicorn][:app_path] %>/shared/pids/unicorn.pid
+  start program "/etc/init.d/unicorn_<%= @node[:unicorn][:app_name] %> start"
+  stop program "/etc/init.d/unicorn_<%= @node[:unicorn][:app_name] %> stop"
+  group deploy
